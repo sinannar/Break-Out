@@ -12,10 +12,11 @@ pc.script.create('BracketScript', function (app) {
         
         onCollisionStart: function (result) {
             if (result.other.rigidbody) {
+                var mult = pc.math.random(-0.5,-1.5);
+                result.other.direction.y *= mult;
                 this.entity.destroy();
             }
         },
-
 
         // Called every frame, dt is time in seconds since last update
         update: function (dt) {
