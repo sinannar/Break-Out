@@ -13,6 +13,18 @@ pc.script.create('BallScript', function (app) {
 
         // Called every frame, dt is time in seconds since last update
         update: function (dt) {
+            if(this.entity.direction.x>0.06 || (this.entity.direction.x<0.03 && this.entity.direction.x>0.00)){
+                this.entity.direction.x = 0.04;
+            }
+            if(this.entity.direction.x<-0.06 || (this.entity.direction.x>-0.03 && this.entity.direction.x<0.00)){
+                this.entity.direction.x = -0.04;
+            }
+            if(this.entity.direction.y>0.06 || (this.entity.direction.y<0.03 && this.entity.direction.y>0.00)){
+                this.entity.direction.y = 0.04;
+            }
+            if(this.entity.direction.y<-0.06 || (this.entity.direction.y>-0.03 && this.entity.direction.y<0.00)){
+                this.entity.direction.y = -0.04;
+            }
             this.entity.translate(this.entity.direction.x, this.entity.direction.y, 0);
         },
         

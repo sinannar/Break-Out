@@ -28,7 +28,6 @@ pc.script.create('BracketScriptLevel2', function (app) {
                             this.entity.model.materialAsset =  app.assets.find("Red", pc.asset.ASSET_MATERIAL);
                         break;
                     }
-
                 }
                 else{
                     this.entity.destroy();

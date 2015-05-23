@@ -14,7 +14,7 @@ pc.script.create('RightWallCollision', function (app) {
         onCollisionStart: function (result) {
             if (result.other.rigidbody) {
                 this.entity.model.materialAsset =  app.assets.find("Black", pc.asset.ASSET_MATERIAL);
-                var mult = pc.math.random(-0.5,-1.5);
+                var mult = pc.math.random(-1.5,-1.5);
                 result.other.direction.x *= mult;            
             }
         },
